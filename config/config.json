@@ -4,7 +4,10 @@
         "password": "h1hfm3k3yxvgtjry",
         "database": "uicqv4480d3uks9c",
         "host": "127.0.0.1",
-        "dialect":"mysql"
+        "dialect":"mysql",
+        "scripts":{
+            "start":"node server.js"
+        }
 
     },
     "production":{
