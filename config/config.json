@@ -1,10 +1,14 @@
 {
     "development":{
         "username": "root",
-        "password": "password",
-        "database": "employees",
+        "password": "h1hfm3k3yxvgtjry",
+        "database": "uicqv4480d3uks9c",
         "host": "127.0.0.1",
         "dialect":"mysql"
 
+    },
+    "production":{
+        "use_env_variable": "JAWSDB_URL",
+        "dialect": "mysql"
     }
 }
