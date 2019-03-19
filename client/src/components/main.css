@@ -6,7 +6,6 @@ body{
     background:#ddd
 }
 tr:hover{
-    cursor: pointer;
 }
 a:hover{
     text-decoration:none;
@@ -81,8 +80,31 @@ a:hover{
 .topper{
     margin-top: 5%
 }
+.update{
+    border: 1px solid #EFB933;
+    background-color:#346596
+}
+.update{
+    cursor: pointer;
+   
+}
+
+.zscore{
+    background-color:#89206e
+    
+}
+.zscore:hover{
+    cursor: pointer;
+    -webkit-transition: all 300ms ease-out .05s;
+   transition: all 300ms ease-out .05s;
+   -moz-transition: all 300ms ease-out .05s;
+   -o-transition: all 300ms ease-out .05s;
+
+}
 #header{
     background-color:#346596;
-    height: 3.5em
+    height: 3.5em;
+    font-family: 'Catamaran', sans-serif;
+
 
 }

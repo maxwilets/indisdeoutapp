@@ -4,7 +4,6 @@ import Table from 'react-bootstrap/Table';
 import Update from './Update';
 import Button from "react-bootstrap/Button";
 
-
 class Employee extends Component{
 
     constructor(props){
@@ -41,10 +40,10 @@ class Employee extends Component{
                     data:{
                         id:id
                     }
-                }).then(alert("Employe Has been Deleted"),(window.location.reload()))
+                }).then(alert("Employe Has been Deleted"),(window.location.reload()), localStorage.clear())
             }
         else{window.location.href="/"}
-        }
+        };
     
 
     updateTable=(id)=>{
@@ -52,10 +51,11 @@ class Employee extends Component{
         this.setState({update:id})
         localStorage.setItem("update", true)
         
-    }
+    };
     createTable=()=>{
         //builds an array to build a table from state
         const newTable=[];
+        //makes sure no undefined values
         if(this.state.employee.length >0){
             for(let i=0; i< this.state.employee.length; i++){
                 newTable.push(this.state.employee[i])
@@ -84,29 +84,38 @@ class Employee extends Component{
                         <th>
                             Salary
                         </th>
+                        <th>
+                            
+                        </th>
+                        <th>
+                            
+                        </th>
                         
                     </tr>
                 </thead>
                 <tbody>
                     {newTable.map(table=>{
                         return(
-                            <tr onClick={()=>{this.updateTable(table.id)}}>
+                        
+                            <tr>
                                 <td>{table.eID}</td>
                                 <td>{table.first_name}</td>
                                 <td>{table.last_name}</td>
                                 <td>{table.email}</td>
                                 <td>{table.phone}</td>
                                 <td>${table.salary}</td>
-                                <button onClick={()=>{this.deleteTable(table.id)}}>X</button>
+                                <td><Button className="update" onClick={()=>{this.updateTable(table.id)}}>Update</Button></td>
+                                <td><Button className="zscore" onClick={()=>{this.deleteTable(table.id)}}>X</Button></td>
                             </tr>
+                      
                         )
                     })}
                 </tbody>
                 </Table>
                 </div>
             )
-        }
-    }
+        };
+    };
     render(){
         if(!this.state.update){
         return(

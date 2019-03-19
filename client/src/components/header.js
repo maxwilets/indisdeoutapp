@@ -6,8 +6,8 @@ class Header extends Component {
             <div>
                 <header id="header">
                     <h4 style={{whiteSpace: "pre"}}>
-                      <ul className="hashhome"><a href="/">Home</a></ul>
-                      <ul className="nav1"><a href="https://wwww.github.com">Info</a></ul>
+                      <ul className="hashhome" onClick={()=>{localStorage.clear()}}><a href="/">Home</a></ul>
+                      <ul className="nav1"><a href="https://github.com/maxwilets/insideoutCRUDproject">Info</a></ul>
                       <ul className="nav2"><a href="https://www.insideoutdev.com/">About Us</a></ul>
                     </h4>
                 </header>
