@@ -37,7 +37,7 @@ class Main extends Component {
 				    <section className="feature major">
 					    {/* <ScrollableAnchor id={'one'} > */}
                         <div className="row">
-                            <div className="col-2"><img src="../../public/images/logo.PNG" alt=""/></div>
+                            <div className="col-2"></div>
 							    <h2 className="col-9 topper" style={{color:"#89206e"}} >Inside Out Development Employee Management</h2>
                                 <div className="mainText">
                                 <div className="row">
